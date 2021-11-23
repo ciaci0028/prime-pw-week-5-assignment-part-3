@@ -58,12 +58,13 @@ showCollection( collection );
 
   function findByArtist( artist, array ) {
     let results = [];
-    for ( artist of array ) {
-        if ( artist === array.album.Artist ) {
-            results.push( array.album.Title );
+    for ( let artist of array ) {
+        if ( artist === array.Artist ) {
+            results.push( array.Title );
+            return results;
         }
-        return results;
     }
+    return null;
   }
 
 // - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, 
@@ -71,6 +72,8 @@ showCollection( collection );
 // all are found.
 
 console.log( findByArtist( 'Justin Nozuka', collection ) );
+console.log( findByArtist( 'Jason Mraz', collection ) );
+console.log( findByArtist( 'Eminem', collection ) );
 
 
 // ### Stretch goals
@@ -85,7 +88,8 @@ console.log( findByArtist( 'Justin Nozuka', collection ) );
     // - If no results are found, return an empty array.
     // - If there is no search object or an empty search object provided as input, then return all albums in the `collection`.
 
-// - Add an array of `tracks` to your album objects. Each track should have a `name` and `duration`. You will need to update the functions to support this new property:
+// - Add an array of `tracks` to your album objects. Each track should have a `name` and `duration`. 
+// You will need to update the functions to support this new property:
   // - Update the `addToCollection` function to also take an input parameter for the array of tracks.
   // - Update `search` to allow a `trackName` search criteria.
   // - Update the `showCollection` function to display the list of tracks for each album with its name and duration.
