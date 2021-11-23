@@ -35,7 +35,7 @@ let collection = [];
   console.log ( collection );
 
 // - Add a function named `showCollection`. This function should:
-  // - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.)
+  // - Take in an array parameter. (This allows it to be reused to show any collection, like the results from the find or search.
   // - Console.log the number of items in the array.
   // - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
 
@@ -46,9 +46,9 @@ let collection = [];
       }
   }
 
-  showCollection( collection );
-
 // - Test the `showCollection` function.
+
+showCollection( collection );
 
 // - Add a function named `findByArtist`. This function should:
   // - Take in `artist` (a string) parameter
@@ -56,9 +56,21 @@ let collection = [];
   // - Loop through the `collection` and add any objects with a matching artist to the array.
   // - Return the array with the matching results. If no results are found, return an empty array.
 
-// - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, as well as an artist you know is not in your collection. Check that for artists with multiple matches, all are found.
+  function findByArtist( artist, array ) {
+    let results = [];
+    for ( artist of array ) {
+        if ( artist === array.album.Artist ) {
+            results.push( array.album.Title );
+        }
+        return results;
+    }
+  }
 
-// > When testing your functions, write all tests in the JavaScript file!
+// - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, 
+// as well as an artist you know is not in your collection. Check that for artists with multiple matches, 
+// all are found.
+
+console.log( findByArtist( 'Justin Nozuka', collection ) );
 
 
 // ### Stretch goals
