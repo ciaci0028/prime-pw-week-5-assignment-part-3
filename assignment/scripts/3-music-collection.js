@@ -25,8 +25,13 @@ let collection = [];
   // - Console.log each album as added using the returned value.
   // - After all are added, console.log the `collection` array.
 
-  addToCollection( 'Holly', 'Justin Nozuka', 2007 );
-  addToCollection( `We Sing, We Dance, We Steal Things`, 'Jason Mraz', 2008);
+  console.log( addToCollection( 'Holly', 'Justin Nozuka', 2007 ) );
+  console.log( addToCollection( `We Sing, We Dance, We Steal Things`, 'Jason Mraz', 2008) );
+  console.log( addToCollection( 'Love Is A Four Letter Word', 'Jason Mraz', 2012 ) );
+  console.log( addToCollection( 'Calling off the Dogs', 'Ron Pope', 2014 ) );
+  console.log( addToCollection( `Red (Taylor's Version)`, 'Taylor Swift', 2021 ) );
+  console.log( addToCollection( 'Almost There', 'MercyMe', 2001 ) );
+
   console.log (collection);
 
 // - Add a function named `showCollection`. This function should:
