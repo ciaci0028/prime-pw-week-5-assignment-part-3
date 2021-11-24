@@ -56,15 +56,15 @@ showCollection( collection );
   // - Loop through the `collection` and add any objects with a matching artist to the array.
   // - Return the array with the matching results. If no results are found, return an empty array.
 
-  function findByArtist( artist, array ) {
+  function findByArtist( artistname, array ) {
     let results = [];
-    for ( let artist of array ) {
-        if ( artist === array.Artist ) {
-            results.push( array.Title );
-            return results;
+    for ( let album of array ) {
+        console.log( artistname );
+        if ( artistname === album.Artist ) {
+            results.push( album );
         }
     }
-    return null;
+    return results;
   }
 
 // - Test the `findByArtist` function. Make sure to test with an artist you know is in the collection, 
