@@ -93,16 +93,17 @@ console.log( findByArtist( 'Eminem', collection ) );
     // and loops through the array, checking to see if there are matches within the array object.
     // if there is a perfect match, it will return a new array of the matching search criteria.
 
-function search ( inputartist, inputyear, array ) {
+function search ( input, array ) {
     let match = [];
-    for ( input of array ) {
-        if ( inputartist === album.Artist && inputyear === album.year ) {
+    for ( let searchValue in array ) {
+        let valueToFind = array[searchValue];
+        if ( input[searchValue].indexOf(valueToFind) >= 0 ) {
             match.push( album );
         }
-    }
-} return match;
+    } return match;
+} 
 
-console.log( search ( ));
+console.log( search ( {artist: 'Jason Mraz', year: '2005'}, collection ));
 
 // - Add an array of `tracks` to your album objects. Each track should have a `name` and `duration`. 
 // You will need to update the functions to support this new property:
