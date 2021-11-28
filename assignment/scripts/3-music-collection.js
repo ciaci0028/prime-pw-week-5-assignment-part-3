@@ -9,6 +9,7 @@ let collection = [];
   // - Add the new object to the end of the `collection` array
   // - Return the newly created object
 
+  console.log ( `------in addToCollection------- `);
   function addToCollection( title, artist, yearPublished ) {
     let album = {
         Title: title,
@@ -39,6 +40,7 @@ let collection = [];
   // - Console.log the number of items in the array.
   // - Loop over the array and console.log each album's information formatted like: `TITLE by ARTIST, published in YEAR`.
 
+  console.log ( `------in showCollection function------- `);
   function showCollection( array ) {
       console.log( array.length );
       for ( let album of array ) {
@@ -56,6 +58,7 @@ showCollection( collection );
   // - Loop through the `collection` and add any objects with a matching artist to the array.
   // - Return the array with the matching results. If no results are found, return an empty array.
 
+  console.log ( `------in findByArtist function------- `);
   function findByArtist( artistname, array ) {
     let results = [];
     for ( let album of array ) {
@@ -93,6 +96,7 @@ console.log( findByArtist( 'Eminem', collection ) );
     // and loops through the array, checking to see if there are matches within the array object.
     // if there is a perfect match, it will return a new array of the matching search criteria.
 
+console.log ( `------in search function------- `);
 function search ( find ) {
     let match = [];
     for ( let album of collection ) {
@@ -119,3 +123,4 @@ console.log( search ( { artist: 'Ray Charles' , year: 1957 } ));
     // 1. NAME: DURATION
     // 2. NAME: DURATION
 // ```
+
