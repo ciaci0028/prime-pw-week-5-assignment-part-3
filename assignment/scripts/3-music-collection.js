@@ -88,6 +88,22 @@ console.log( findByArtist( 'Eminem', collection ) );
     // - If no results are found, return an empty array.
     // - If there is no search object or an empty search object provided as input, then return all albums in the `collection`.
 
+    // Me trying to talk through the code:
+    // I want to create a function that uses artist and year as an input search
+    // and loops through the array, checking to see if there are matches within the array object.
+    // if there is a perfect match, it will return a new array of the matching search criteria.
+
+function search ( inputartist, inputyear, array ) {
+    let match = [];
+    for ( input of array ) {
+        if ( inputartist === album.Artist && inputyear === album.year ) {
+            match.push( album );
+        }
+    }
+} return match;
+
+console.log( search ( ));
+
 // - Add an array of `tracks` to your album objects. Each track should have a `name` and `duration`. 
 // You will need to update the functions to support this new property:
   // - Update the `addToCollection` function to also take an input parameter for the array of tracks.
