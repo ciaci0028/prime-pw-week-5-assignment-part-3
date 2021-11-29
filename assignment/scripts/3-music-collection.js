@@ -10,11 +10,12 @@ let collection = [];
   // - Return the newly created object
 
   console.log ( `------in addToCollection------- `);
-  function addToCollection( title, artist, yearPublished ) {
+  function addToCollection( title, artist, yearPublished, trackArray ) {
     let album = {
         Title: title,
         Artist: artist,
-        year: yearPublished
+        year: yearPublished,
+        tracks: trackArray
     }
     collection.push( album );
     return album;
@@ -26,7 +27,8 @@ let collection = [];
   // - Console.log each album as added using the returned value.
   // - After all are added, console.log the `collection` array.
 
-  console.log( addToCollection( 'Holly', 'Justin Nozuka', 2007 ) );
+  console.log( addToCollection( 'Holly', 'Justin Nozuka', 2007 , 
+  [ `Make It Mine`, `I'm Yours`, `Lucky`, `Butterfly`, `Live High`, `Love for a Child` ] ) );
   console.log( addToCollection( `We Sing, We Dance, We Steal Things`, 'Jason Mraz', 2008) );
   console.log( addToCollection( 'Love Is A Four Letter Word', 'Jason Mraz', 2012 ) );
   console.log( addToCollection( 'Calling off the Dogs', 'Ron Pope', 2014 ) );
