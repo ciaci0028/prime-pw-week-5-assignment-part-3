@@ -121,9 +121,6 @@ function search ( find ) {
         if ( album.Artist === find.artist && album.year === find.year ) {
             match.push( album );
         }
-        else if ( album.tracks ==== find.track ) {
-            match.push( album );
-        }
     } return match;
 } 
 
