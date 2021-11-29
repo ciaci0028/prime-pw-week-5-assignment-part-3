@@ -27,13 +27,28 @@ let collection = [];
   // - Console.log each album as added using the returned value.
   // - After all are added, console.log the `collection` array.
 
-  console.log( addToCollection( 'Holly', 'Justin Nozuka', 2007 , 
-  [ `Make It Mine`, `I'm Yours`, `Lucky`, `Butterfly`, `Live High`, `Love for a Child` ] ) );
-  console.log( addToCollection( `We Sing, We Dance, We Steal Things`, 'Jason Mraz', 2008) );
-  console.log( addToCollection( 'Love Is A Four Letter Word', 'Jason Mraz', 2012 ) );
-  console.log( addToCollection( 'Calling off the Dogs', 'Ron Pope', 2014 ) );
-  console.log( addToCollection( `Red (Taylor's Version)`, 'Taylor Swift', 2021 ) );
-  console.log( addToCollection( 'Almost There', 'MercyMe', 2001 ) );
+  console.log( addToCollection( 'Holly', 'Justin Nozuka', 2007,
+  [ `Down In A Cold Dirty Well: 4:22`, `Golden Train: 3:03`, `Be Back Soon: 4:16`, `Mr. Therapy Man: 3:34`,
+  `Supposed To Grow Old: 4:16`, `After Tonight: 4:00`, `Criminal: 4:00`, `I'm In Peace: 3:35`, `Oh Mamma: 4:49`,
+  `Save Him: 5:20`, `If I Gave You My Life: 4:31`, `Why: 2:31`, `Lullabye: 8:05` ] ) );
+  console.log( addToCollection( `We Sing, We Dance, We Steal Things`, 'Jason Mraz', 2008, 
+  [ `Make It Mine: 3:08`, `I'm Yours: 4:09`, `Lucky: 3:09`, `Butterfly: 5:00`, `Live High: 4:12`, `Love for a Child: 4:05`,
+  `Details in the Fabric: 5:45`, `Coyotes: 3:38`, `Only Human: 4:02`, `The Dynamo of Volition: 3:36`, `If It Kills Me: 4:33`,
+  `A Beautiful Mess: 5:37` ] ) );
+  console.log( addToCollection( 'Love Is A Four Letter Word', 'Jason Mraz', 2012,
+  [ `The Freedom Song: 4:00`, `Living In The Moment: 3:55`, `The Woman That I Love: 3:11`, `I Won't Give Up: 4:00`,
+  `5/6: 5:57`, `Everything is Sound: 4:46`, `93 Million Miles: 3:37`, `Frank D. Fixer: 4:45`, `Who's Thinking About You Now: 4:48`,
+  `In Your Hands: 4:51`, `Be Honest: 3:25`, `The World As I See It: 3:59`, `I'm Coming Over: 4:29` ] ) );
+  console.log( addToCollection( 'Calling off the Dogs', 'Ron Pope', 2014,
+  [ `Lick My Wounds: 3:16`, `Empty Page: 3:22`, `Explain: 3:30`, `Silver Spoon: 5:04`, `Signs: 4:55`, `Push Me Away: 4:08`,
+  `Nothing: 4:04`, `Off Your Feet: 5:15`, `Back to Bed: 4:43`, `New Friends: 4:09`, `Blood From a Stone: 4:13` ] ) );
+  console.log( addToCollection( `Red (Taylor's Version)`, 'Taylor Swift', 2021,
+  [ `State of Grace: 4:55`, `Red: 3:34`, `Treacherous: 4:03`, `I Knew You Were Trouble: 3:40`, `All Too Well: 5:29`, `22: 3:51`,
+  `I Almost Do: 4:05`, `We Are Never Getting Back Together: 3:13`, `Stay Stay Stay: 3:26`, `The Last Time: 4:59` ] ) );
+  console.log( addToCollection( 'Almost There', 'MercyMe', 2001,
+  [ `I Worship You: 3:08`, `Here Am I: 4:20`, `On My Way To You: 4:06`, `How Great Is Your Love: 4:13`, `I Can Only Imagine: 4:09`,
+  `Bless Me Indeed: 4:15`, `Cannot Say Enough: 4:47`, `House of God: 3:14`, `Call to Worship: 4:52`, `All Fall Down: 3:45`,
+  `In You: 4:17` ] ) );
 
   console.log ( collection );
 
@@ -46,7 +61,8 @@ let collection = [];
   function showCollection( array ) {
       console.log( array.length );
       for ( let album of array ) {
-          console.log ( album.Title + ` by ` + album.Artist + ` published in ` + album.year );
+          console.log ( album.Title + ` by ` + album.Artist + ` published in ` + album.year + `:` + '\n' +
+           album.tracks );
       }
   }
 
@@ -105,11 +121,15 @@ function search ( find ) {
         if ( album.Artist === find.artist && album.year === find.year ) {
             match.push( album );
         }
+        else if ( album.tracks ==== find.track ) {
+            match.push( album );
+        }
     } return match;
 } 
 
 console.log( search ( { artist: 'Jason Mraz' , year: 2008 } ));
 console.log( search ( { artist: 'Ray Charles' , year: 1957 } ));
+console.log( search ( { track: `I Won't Give Up` } ) );
 
 // - Add an array of `tracks` to your album objects. Each track should have a `name` and `duration`. 
 // You will need to update the functions to support this new property:
